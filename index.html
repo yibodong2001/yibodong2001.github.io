@@ -15,8 +15,11 @@ if (playChoice) {
         : "输入爱或不爱";
     alert(result);
     let playAgain = confirm("要不要再回答一次嘿嘿");
-    playAgain ? location.reload() : alert("不行不行，你就要再回答一次😭");
-    location.reload();
+    playAgain
+      ? location.reload()
+      : confirm("不行不行，你就要再回答一次😭")
+      ? location.reload()
+      : alert("好好好好好，不说就不说😒");
   } else {
     alert("快点说爱还是不爱我嘛😒");
     location.reload();
@@ -25,7 +28,6 @@ if (playChoice) {
   alert("快点说！！！🙄");
   location.reload();
 }
-
         </script>
     </head>
     <body>
