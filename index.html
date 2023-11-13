@@ -3,44 +3,27 @@
         <link rel="stylesheet" href="css/yb.css">
         <title>love story</title>
         <script>
-let playGame = confirm("Shall we play rock, paper, or scissors?");
-if (playGame) {
-  let playChoice = prompt("Please choose rock, paper, or scissors");
-  if (playChoice) {
-    let playerOne = playChoice.trim().toLowerCase();
-    if (
-      playerOne === "rock" ||
-      playerOne === "paper" ||
-      playerOne === "scissors"
-    ) {
-      let computerChoice = Math.floor(Math.random() * 3 + 1);
-      let computer =
-        computerChoice === 1
-          ? "rock"
-          : computerChoice === 2
-          ? "paper"
-          : "scissors";
-      let result =
-        playerOne === computer
-          ? "tie"
-          : playerOne === "rock" && computer === "paper"
-          ? `playerOne:${playerOne}\n Computer:${computer}\nComputer wins`
-          : playerOne === "paper" && computer === "scissors"
-          ? `playerOne:${playerOne}\n Computer:${computer}\n Computer wins`
-          : playerOne === "scissors" && computer === "rock"
-          ? `playerOne:${playerOne}\n Computer:${computer}\n Computer wins`
-          : `playerOne:${playerOne}\n Computer:${computer}\n You win`;
-      alert(result);
-      let playAgain = confirm("Would you like to play again?");
-      playAgain ? location.reload() : alert("ok, maybe next time");
-    } else {
-      alert("You did not choose rock, paper, or scissors");
-    }
+let playChoice = prompt("你爱不爱董熠博，请输入爱还是不爱");
+if (playChoice) {
+  let playerOne = playChoice.trim().toLowerCase();
+  if (playerOne === "爱" || playerOne === "不爱") {
+    let result =
+      playerOne === "爱"
+        ? "我也最爱你了宝宝😙"
+        : playerOne === "不爱"
+        ? "哼,不理你了"
+        : "输入爱或不爱";
+    alert(result);
+    let playAgain = confirm("要不要再回答一次嘿嘿");
+    playAgain ? location.reload() : alert("不行不行，你就要再回答一次😭");
+    location.reload();
   } else {
-    alert("I guess you changed your mind, maybe next time");
+    alert("快点说爱还是不爱我嘛😒");
+    location.reload();
   }
 } else {
-  alert("ok, maybe next time");
+  alert("快点说！！！🙄");
+  location.reload();
 }
 
         </script>
